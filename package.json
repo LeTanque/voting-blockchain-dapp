@@ -1,0 +1,26 @@
+{
+  "name": "voting-blockchain-dapp",
+  "version": "1.0.0",
+  "description": "First blockchain",
+  "main": "index.js",
+  "dependencies": {
+    "ganache-cli": "^6.5.1",
+    "solc": "^0.4.25",
+    "web3": "^0.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeTanque/voting-blockchain-dapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeTanque/voting-blockchain-dapp/issues"
+  },
+  "homepage": "https://github.com/LeTanque/voting-blockchain-dapp#readme"
+}

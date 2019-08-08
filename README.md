@@ -9,24 +9,25 @@ Install Dependencies:
 1. ganache-cli ```npm install ganache-cli web3@0.20.2```
 2. solc ```npm install solc```
 
+
 Directions:
 1. Git Clone this repository
 2. Run ganache-cli ```node_modules/.bin/ganace-cli```
 3. Open up Nodejs console ```node```
 4. Compile the contract
   ```
-  code = fs.readFileSync('Voting.sol').toString()
-  solc = require('solc')
-  compiledCode = solc.compile(code)
+code = fs.readFileSync('Voting.sol').toString()
+solc = require('solc')
+compiledCode = solc.compile(code)
   ```
 
 5. Deploy the contract
   ```
-  abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
-  VotingContract = web3.eth.contract(abiDefinition)
-  byteCode = compiledCode.contracts[':voting'].bytecode
-  deployedContract = VotingContract.new(['Bill','Tom','Janice'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
-  contractInstance = VotingContract.at(deployedContract.address)
+abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
+VotingContract = web3.eth.contract(abiDefinition)
+byteCode = compiledCode.contracts[':voting'].bytecode
+deployedContract = VotingContract.new(['Bill','Tom','Janice'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
+contractInstance = VotingContract.at(deployedContract.address)
   ```
 
 
